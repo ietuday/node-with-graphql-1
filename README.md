@@ -170,6 +170,14 @@ With GraphQL, the user is able to make a single call to fetch the required infor
 ### GRAPHQL Nested
 ![Alt text](./screenshots/graphql-nested.png?raw=true "Optional Title")
 
+### GRAPHQL operations
+![Alt text](./screenshots/graphql-operations.png?raw=true "Optional Title")
+
+### GRAPHQL Variables
+![Alt text](./screenshots/graphql-variable.png?raw=true "Optional Title")
+
+### GRAPHQL Resolvers
+![Alt text](./screenshots/resolvers.png?raw=true "Optional Title")
 
 
 ### Links
