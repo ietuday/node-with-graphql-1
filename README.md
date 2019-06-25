@@ -174,4 +174,6 @@ With GraphQL, the user is able to make a single call to fetch the required infor
 
 ### Links
 
-[test](http://www.google.com)
+[Understanding GraphQL Queries, Mutations and Subscriptions](https://medium.com/fbdevclagos/understanding-graphql-queries-mutations-and-subscriptions-a80a8b5c877c)
+
+
