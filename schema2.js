@@ -48,7 +48,9 @@ enum Gender{
  }
  type Mutation{
      createUser(input: UserInput) : User
+     updateUser(input: UserInput) : User
      createItem(input: HackerNewsItemInput) : HackerNewsItem
+
  }
 `;
 const schema = makeExecutableSchema({typeDefs, resolvers});

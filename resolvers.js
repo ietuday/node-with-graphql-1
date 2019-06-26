@@ -21,15 +21,12 @@ export const resolvers = {
       const user = await User.create(input);
       return await User.findOne({_id: user.id}).populate('items');
     },
+    updateUser: async ( _, {input}) => {    
+      return await User.findOneAndUpdate({_id: input.id}, input, {new: true}).populate('items');
+    },
 
     createItem:  (_, {input}) => {
          return Promise.resolve(Item.create(input));
-              // .then((docs) => {
-              //   console.log("Sucessfully Added to DB", docs);
-              // })
-              // .catch((error) => {
-              //   console.log("Error on Adding to DB", error);
-              // });
     }
   }
 };

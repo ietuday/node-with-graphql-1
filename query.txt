@@ -102,7 +102,7 @@ mutation{
 
 Create User mutation
 
-
+  
 mutation{
   createUser(input: {
     firstName: "nzbcnzxbcnb",
