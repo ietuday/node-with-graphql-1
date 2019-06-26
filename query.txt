@@ -60,3 +60,42 @@ query{
 }
 
 2. 
+
+query{
+  getItem(id: "5d1371f6b4d442363a50efd7"){
+    id
+    title
+    text
+    time
+    timeISO
+  }
+}
+
+mutation{
+  createItem(input: {
+    text: "bbbbbdsfddfdmnfbvnbvxnv"
+    title: "THis is hacker new story"
+    time: 123
+    timeISO: "2 PM"
+    deleted: false
+  }){
+    text
+    title
+    time
+    id
+  }
+}
+
+
+mutation{
+  createUser(input: {
+    id: "123"
+    lastName: "!1234343"
+    firstName: "!2321"
+    age: 2121
+  }){
+    id
+  }
+}
+
+3. 
