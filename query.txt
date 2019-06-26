@@ -160,6 +160,21 @@ mutation{
   }
 }
 
+6. getUsers query
+query{
+  getUsers{
+		firstName
+    lastName
+    email
+    id
+    items{
+      id
+      title
+    }
+  }
+}
+
+
 
 
 
