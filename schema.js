@@ -11,6 +11,15 @@ const schema = buildSchema(
         deleted: Boolean
     }
 
+    input HackerNewsItemInput{
+        id: String
+        text: String
+        timeISO: String
+        time: Int
+        title: String
+        deleted: Boolean
+    }
+
     type Email{
         email: String!
     }
@@ -20,6 +29,15 @@ const schema = buildSchema(
         firstName: String!
         lastName: String!
         email: String 
+        age: Int!
+        gender: Gender
+        items: [HackerNewsItem]
+    }
+
+    enum Gender{
+        MALE
+        FEMALE
+        OTHER
     }
     type Query {
         item: HackerNewsItem
@@ -32,6 +50,9 @@ const schema = buildSchema(
         firstName: String!,
         lastName: String!,
         email: String
+        age: Int!
+        gender: Gender
+        items: [HackerNewsItemInput]
     }
 
     type Mutation{
