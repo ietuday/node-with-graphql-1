@@ -1,35 +1,34 @@
-let users = [];
+const users = [];
 let user = {};
-
-/**
- * Resolver for graphql
- */
-
+import Item from './models/item';
 
 export const resolvers = {
-    Query: {
-      item: () => {
-        return {
-            id: '123123',
-            text: 'This is hacker new text',
-            timeISO: '2pm Tuseday',
-            time: 12345678,
-            title: 'Graph First App',
-            deleted: false
-        };
-      },
-      getUser: ({id}) => {
-          return users.find(user => user.id === id);
-      },
-      user: () => {
-        return users;
-      },
+  Query :{
+    getItem: async(_, {id}) => {
+      return await Item.findOne({_id: id});
     },
-    Mutation: {
-      createUser: ({input}) => {
-        user = input;
-        users.push(user);
-        return user;
-      }   
+    getUser: (_,{id}) => {
+      return users.find(user => user.id === id);
+    },
+    users: () => {
+      return users;
+    },
+  },
+  Mutation:{
+    createUser: ( _, {input}) => {    
+      user = input;
+      users.push(user);
+      return user;
+    },
+
+    createItem:  (_, {input}) => {
+         return Promise.resolve(Item.create(input));
+              // .then((docs) => {
+              //   console.log("Sucessfully Added to DB", docs);
+              // })
+              // .catch((error) => {
+              //   console.log("Error on Adding to DB", error);
+              // });
     }
+  }
 };
