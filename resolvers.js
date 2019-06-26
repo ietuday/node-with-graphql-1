@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const users = [];
 let user = {};
 
@@ -9,8 +11,9 @@ export const resolvers = {
     getItem: async(_, {id}) => {
       return await Item.findOne({_id: id});
     },
-    getUser: (_,{id}) => {
-      return users.find(user => user.id === id);
+    getUser: async (_,{id}) => {
+      // const newid = mongoose.Types.ObjectId(id);
+      return  await User.findOne({_id: id}).populate('items');
     },
     getUsers: async() => {
       return await User.find().populate('items');
