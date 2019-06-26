@@ -1,0 +1,62 @@
+1.
+
+mutation{
+  createUser(input: {
+    id: "bsf272873dhsajt37463",
+    firstName: "Udayaditya",
+    lastName: "Singh",
+  	email: "uday@gmail.com",
+    age: 27
+    gender: MALE
+    items: [
+      {
+      	id: "13",
+      	text: "tetsndnvsvczbcvb zvc"
+      	time: 232
+      	timeISO: "2 Pm"
+      	title: "story title"
+      },
+      {
+      	id: "14",
+      	text: "zcfdfvxtrersewra zvc"
+      	time: 245
+      	timeISO: "7 Pm"
+      	title: "Tetst title"
+    	}
+    ]
+  })
+  
+  {
+    firstName
+    lastName
+    email
+    age
+    id
+    gender
+    items{
+      id
+      text
+      time
+      title
+      timeISO
+    }
+  }
+}
+
+query{
+  getUser(id:"bsf272873dhsajt37463"){
+    firstName
+    lastName
+    email
+    gender
+    items{
+      id
+      text
+      time
+      title
+      timeISO
+    }
+  }
+}
+
+2. 

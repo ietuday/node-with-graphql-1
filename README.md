@@ -185,3 +185,6 @@ With GraphQL, the user is able to make a single call to fetch the required infor
 [Understanding GraphQL Queries, Mutations and Subscriptions](https://medium.com/fbdevclagos/understanding-graphql-queries-mutations-and-subscriptions-a80a8b5c877c)
 
 
+[GraphQL and MongoDB — a quick example](https://medium.com/the-ideal-system/graphql-and-mongodb-a-quick-example-34643e637e49)
+
+
