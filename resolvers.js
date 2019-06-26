@@ -24,7 +24,9 @@ export const resolvers = {
     updateUser: async ( _, {input}) => {    
       return await User.findOneAndUpdate({_id: input.id}, input, {new: true}).populate('items');
     },
-
+    deleteUser: async ( _, {id}) => {    
+      return await User.findOneAndRemove({_id: id});
+    },
     createItem:  (_, {input}) => {
          return Promise.resolve(Item.create(input));
     }

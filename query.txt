@@ -123,3 +123,43 @@ mutation{
     }
   }
 }
+
+
+4. Update User Mutation 
+
+mutation{
+  updateUser(input: {
+    id: "5d137a3242ea595c472a4091"
+    firstName: "xcvbnm,.",
+    lastName: "bnbxvcxzvcbzcvzcz",
+		age:23
+    email: "tczxcxcczcecst@gmail.com",
+    gender: MALE,
+    items: ["5d1371f6b4d442363a50efd7", "5d13702606ce89302248cc1a"]
+  }){
+    firstName
+    lastName
+    email
+    items{
+      text
+      timeISO
+      time
+      title
+    }
+  }
+}
+
+5. Delete User Mutation 
+
+mutation{
+  deleteUser(id: "5d137a3242ea595c472a4091"){
+    id
+    firstName
+    lastName
+    email
+  }
+}
+
+
+
+
