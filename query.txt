@@ -99,3 +99,27 @@ mutation{
 }
 
 3. 
+
+Create User mutation
+
+
+mutation{
+  createUser(input: {
+    firstName: "nzbcnzxbcnb",
+    lastName: "nx bnbwedbdskjdh",
+		age:23
+    email: "test@gmail.com",
+    gender: MALE,
+    items: ["5d1371f6b4d442363a50efd7"]
+  }){
+    firstName
+    lastName
+    email
+    items{
+      text
+      timeISO
+      time
+      title
+    }
+  }
+}
